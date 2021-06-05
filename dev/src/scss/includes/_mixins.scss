@@ -1,0 +1,90 @@
+// font-face
+// @include font-face('Ico Moon', '../fonts/icomoon', normal, normal);
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+	font-family: $font-family;
+	  src: url('#{$file-path}.eot');
+	  src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+		 // url('#{$file-path}.woff2') format('woff2'),
+		 url('#{$file-path}.woff') format('woff'),
+		 url('#{$file-path}.ttf') format('truetype'),
+		 url('#{$file-path}.svg##{$font-family}') format('svg');
+	  font-weight: $font-weight;
+	  font-style: $font-style;
+	}
+	// Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	  @font-face {
+	  font-family: $font-family;
+	  src: url('#{$file-path}.svg##{$font-family}') format('svg');
+	}
+  }
+}
+// placeholder
+@mixin placeholder {
+	&::-webkit-input-placeholder        {@content}
+	&:-moz-placeholder                  {@content;opacity: 1}
+	&::-moz-placeholder                 {@content;opacity: 1}
+	&:-ms-input-placeholder             {@content}
+	&:focus::-webkit-input-placeholder  {color: transparent;}
+	&:focus:-moz-placeholder            {color: transparent;}
+	&:focus::-moz-placeholder           {color: transparent;}
+	&:focus:-ms-input-placeholder       {color: transparent;}
+}
+@mixin selection {
+	::-moz-selection { @content; }
+	::selection { @content; }
+}
+@mixin icons($width,$height,$horisontal,$vertical,$mar_right){
+	width: $width;
+	height: $height;
+	background-position: $horisontal $vertical;
+	margin-right: $mar_right;
+}
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+	color: $color;
+	background-color: darken($background, 10%);
+		border-color: darken($border, 10%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+	background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+	&,
+	&:hover,
+	&:focus,
+	&.focus,
+	&:active,
+	&.active {
+	  background-color: $background;
+		  border-color: $border;
+	}
+  }
+}
+
+// Button sizes
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}

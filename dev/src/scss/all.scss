@@ -1,0 +1,143 @@
+// variables
+@import "includes/variables";
+// custom mixins
+@import "includes/mixins";
+// res css
+@import "includes/res";
+// @import "includes/normalize";
+// media quaries
+@import "includes/media-queries";
+// fonts
+// @include font-face('Ico Moon', '../fonts/icomoon', normal, normal);
+
+html{
+	height:100%;
+	min-width:320px;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body{
+	font: #{$site_font_size}/#{$site_line_height} $default_font;
+	// min-height:100%;
+	height: 100%;
+	min-width:320px;
+	position:relative;
+	color:$body_color;
+	background:$body_bg;
+}
+a{
+	color:$link_color;
+	text-decoration:none;
+	// &:hover{
+	// 	text-decoration:underline;
+	// 	color:$link_hover_color;
+	// }
+}
+
+input{
+	outline:none;
+	-webkit-appearance:none;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	border-radius:0;
+}
+
+*{
+	outline: none;
+}
+* {
+	box-sizing: border-box;
+	&:before, &:after{
+		box-sizing: border-box;
+	}
+	@include selection {
+		background: $selection_bg; color: $selection_color;
+	}
+}
+//ico
+// *[class*=ico_]{
+// 	display:inline-block;
+// 	vertical-align:top;
+// 	background:url(../images/sprite@320.png) no-repeat;
+// 	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+// 		background:url(../images/sprite2x.png) no-repeat;
+// 		background-size: 0px 0px; // width and height sprite320
+// 	}
+// }
+
+//placeholder cross-browser
+input, textarea {
+	@include placeholder {color: $placeholder_color;}
+	&.placeholder {color: $placeholder_color !important;}
+}
+// separator
+// @extend %separator;
+%separator {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 10px;
+	&:before {
+		content: '|';
+		padding-right: 10px;
+		color: #000;
+	}
+	&:first-child {
+		padding-left: 0;
+		&:before {
+			display: none;
+			padding-right: 0;
+		}
+	}
+}
+
+// clearfix
+// @extend %clearfix;
+%clearfix {
+	&:before {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.wrapper{
+	display: table;
+	width: 100%;
+	height: 100%;
+	table-layout: fixed;
+}
+.container{}
+//icon
+// [class^="icon-"], [class*=" icon-"] {
+// 	/* use !important to prevent issues with browser extensions that change fonts */
+// 	font-family: 'Ico Moon' !important;
+// 	font-size: 12px;
+// 	speak: none;
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	font-variant: normal;
+// 	text-transform: none;
+// 	line-height: 1;
+
+// 	/* Better Font Rendering =========== */
+// 	-webkit-font-smoothing: antialiased;
+// 	-moz-osx-font-smoothing: grayscale;
+// }
+
+// @include max-screen(1000px) {}
+
+// template css
+@import "templates/header";
+// template css
+@import "templates/main";
+// template css
+@import "templates/footer";
+// // template css
+// @import "templates/forms";
+// // template css
+// @import "includes/popup";

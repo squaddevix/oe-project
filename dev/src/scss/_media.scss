@@ -1,0 +1,87 @@
+@mixin to1500 {
+	@media only screen and (max-width: 1500px) {
+		@content;
+	}
+}
+@mixin to1468 {
+	@media only screen and (max-width: 1468px) {
+		@content;
+	}
+}
+@mixin to1400 {
+	@media only screen and (max-width: 1400px) {
+		@content;
+	}
+}
+@mixin to1366 {
+	@media only screen and (max-width: 1366px) {
+		@content;
+	}
+}
+@mixin to1300 {
+	@media only screen and (max-width: 1300px) {
+		@content;
+	}
+}
+@mixin to1280 {
+	@media only screen and (max-width: 1280px) {
+		@content;
+	}
+}
+@mixin to1200 {
+	@media only screen and (max-width: 1200px) {
+		@content;
+	}
+}
+@mixin to1024 {
+	@media only screen and (max-width: 1024px) {
+		@content;
+	}
+}
+@mixin to1000 {
+	@media only screen and (max-width: 1000px) {
+		@content;
+	}
+}
+@mixin to960 {
+	@media only screen and (max-width: 960px) {
+		@content;
+	}
+}
+@mixin to768 {
+	@media only screen and (max-width: 768px) {
+		@content;
+	}
+}
+@mixin to767 {
+	@media only screen and (max-width: 767px) {
+		@content;
+	}
+}
+@mixin to640 {
+	@media only screen and (max-width: 640px) {
+		@content;
+	}
+}
+@mixin to568 {
+	@media only screen and (max-width: 568px) {
+		@content;
+	}
+}
+@mixin to480 {
+	@media only screen and (max-width: 480px) {
+		@content;
+	}
+}
+@mixin to380 {
+	@media only screen and (max-width: 380px) {
+		@content;
+	}
+}
+
+//min
+@mixin upto1025 {
+	@media only screen and (min-width: 1025px) {
+		@content;
+	}
+}
