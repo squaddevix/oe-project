@@ -4,3 +4,47 @@
 // @import 'icons';
 
 // @import 'includes/plugins';
+.section{
+	padding: 80px 0;
+}
+
+.general_bord{
+	// font-size: 24px;
+	font-size: 1.5vw;
+	font-weight: 300;
+	color: #66645E;
+	.columns{
+		display: flex;
+		align-items: center;
+	}
+	.column{
+		width: 40%;
+		&.second{
+			width: 60%;
+			position: relative;
+		}
+	}
+	img{
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	h1{
+		color: #303031;
+		line-height: 1;
+		// font-size: calc(100%*2/5 + 3.5vw);
+		font-size: 3.35vw;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: 'Limelight', cursive;
+}
+h1{
+	font-size: 64px;
+}

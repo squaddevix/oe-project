@@ -3,12 +3,13 @@
 // custom mixins
 @import "includes/mixins";
 // res css
-@import "includes/res";
-// @import "includes/normalize";
+// @import "includes/res";
+@import "includes/normalize";
 // media quaries
 @import "includes/media-queries";
 // fonts
 // @include font-face('Ico Moon', '../fonts/icomoon', normal, normal);
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Open+Sans:wght@300;400;600&family=Space+Mono&display=swap');
 
 html{
 	height:100%;
@@ -92,26 +93,32 @@ input, textarea {
 
 // clearfix
 // @extend %clearfix;
-%clearfix {
-	&:before {
-		content: "";
-		display: table;
-		clear: both;
-	}
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-}
+// %clearfix {
+// 	&:before {
+// 		content: "";
+// 		display: table;
+// 		clear: both;
+// 	}
+// 	&:after {
+// 		content: "";
+// 		display: table;
+// 		clear: both;
+// 	}
+// }
 
 .wrapper{
 	display: table;
 	width: 100%;
 	height: 100%;
 	table-layout: fixed;
+	overflow: hidden;
 }
-.container{}
+.container{
+	max-width: 1408px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 40px
+}
 //icon
 // [class^="icon-"], [class*=" icon-"] {
 // 	/* use !important to prevent issues with browser extensions that change fonts */

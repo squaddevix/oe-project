@@ -4,3 +4,44 @@
 // @import 'icons';
 
 // @import 'includes/plugins';
+.header{
+	padding: 40px 0;
+	.holder{
+		display: flex;
+	}
+}
+
+.logo{
+	flex-shrink: 0;
+	flex-grow: 0;
+	margin-right: 20px;
+	a,
+	svg{
+		display: block;
+	}
+}
+
+.header_navigation{
+	display: flex;
+	align-items: center;
+	flex-shrink: 1;
+	flex-grow: 1;
+	min-width: 1px;
+	justify-content: flex-end;
+	margin: 0 -20px;
+	padding: 0;
+	list-style: none;
+	.item{
+		font-size: 20px;
+		padding: 0 20px;
+	}
+	a{
+		color: #000;
+		transition: color .3s;
+		@include min-screen(1025px) {
+			&:hover{
+				color: #71A894;
+			}
+		}
+	}
+}
