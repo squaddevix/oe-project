@@ -8,4 +8,39 @@
 .footer{
 	height: 1px;
 	display: table-row;
+	.frame{
+		padding: 50px 0;
+	}
+	.holder{
+		display: flex;
+	}
+}
+
+.footer_logo{
+	flex-grow: 0;
+	flex-shrink: 0;
+	margin-right: 20px;
+}
+.footer_navigation{
+	flex-shrink: 1;
+	flex-grow: 1;
+	min-width: 1px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 0;
+	margin: -5px -10px;
+	list-style: none;
+	.item{
+		padding: 5px 10px;
+	}
+	a{
+		color: #000;
+		transition: color .3s;
+		@include min-screen(1025px) {
+			&:hover{
+				color: #71A894;
+			}
+		}
+	}
 }

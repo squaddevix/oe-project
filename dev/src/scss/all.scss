@@ -9,7 +9,7 @@
 @import "includes/media-queries";
 // fonts
 // @include font-face('Ico Moon', '../fonts/icomoon', normal, normal);
-@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Open+Sans:wght@300;400;600&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Open+Sans:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap');
 
 html{
 	height:100%;
@@ -73,23 +73,23 @@ input, textarea {
 }
 // separator
 // @extend %separator;
-%separator {
-	display: inline-block;
-	vertical-align: middle;
-	padding-left: 10px;
-	&:before {
-		content: '|';
-		padding-right: 10px;
-		color: #000;
-	}
-	&:first-child {
-		padding-left: 0;
-		&:before {
-			display: none;
-			padding-right: 0;
-		}
-	}
-}
+// %separator {
+// 	display: inline-block;
+// 	vertical-align: middle;
+// 	padding-left: 10px;
+// 	&:before {
+// 		content: '|';
+// 		padding-right: 10px;
+// 		color: #000;
+// 	}
+// 	&:first-child {
+// 		padding-left: 0;
+// 		&:before {
+// 			display: none;
+// 			padding-right: 0;
+// 		}
+// 	}
+// }
 
 // clearfix
 // @extend %clearfix;
