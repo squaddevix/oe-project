@@ -2,7 +2,7 @@
 
 WP-design
 
-res normilize
+Normalize reset CSS
 
 Technologies used:
 	-handelbars/html
